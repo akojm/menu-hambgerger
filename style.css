@@ -1,0 +1,107 @@
+
+*, ::before, ::after{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+    font-family: primary;
+}
+
+@font-face {
+    font-family: primary;
+    src: url(/font/Quicksand-VariableFont_wght.ttf);
+}
+
+.home{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    text-align: center;
+    font-size: 50px;
+    color: #f1F1F1;
+    font-weight: lighter;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,50%);
+}
+h1 span {
+   font-weight: bold;
+}
+
+h1.active{
+    opacity: 0;
+    transition:transform 0.3s ease-out, opacity 0.6s ease-in-out;
+}
+
+.nav-toggler {
+    position: fixed;
+    z-index: 100;
+    top: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: transparent;
+}
+.line{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #f1f1f1;
+    transition:transform 0.3s ease-out, opacity 0.1s ease-in-out;
+}
+.l1{
+    transform: translateY(-10px);
+}
+.l3{
+    transform: translateY(10px);
+}
+.nav-toggler.active .l1{
+    transform: translateY(0px) rotate(135deg);
+}
+.nav-toggler.active .l2{
+    opacity: 0;
+}
+.nav-toggler.active .l3{
+    transform: translateY(0px) rotate(-135deg);
+}
+nav{
+    position: fixed;
+    width: 100vw;
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.067);
+    border-bottom: 1px solid #f1f1f1;
+   transform: translateY(-100%);  
+   transition: transform 0.3s cubic-bezier(0.73, 0.11, 0.67, 0.84) ;
+
+}
+nav.active{
+    transform: translate(0);
+}
+nav a {
+    font-family: primary, sans-serif;
+    color: #f1f1f1;
+    font-size: 30px;
+    margin: 30px 0px;
+    text-decoration: none;
+    
+    
+}
