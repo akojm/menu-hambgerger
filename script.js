@@ -9,3 +9,4 @@ hamburgerButton.classList.toggle("active");
 navigation.classList.toggle("active");
 title.classList.toggle("active");
 }
+
