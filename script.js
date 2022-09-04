@@ -3,11 +3,13 @@ const hamburgerButton = document.querySelector(".nav-toggler")
 const navigation = document.querySelector("nav")
 const title = document.querySelector("h1")
 
+console.log(title);
+
 window.onload = ()=> {
 
-    hamburgerButton.addEventListener("click", togglerNav)
+ hamburgerButton.addEventListener("click", toggleNav)
 
-    function togglerNav(){
+    function toggleNav(){
     hamburgerButton.classList.toggle("active");
     navigation.classList.toggle("active");
     title.classList.toggle("active");
